@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ywQ-O7-TP6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuicideDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check in, Take action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEm-v7-PDQ">
+                                <rect key="frame" x="28" y="86" width="368" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="N15-AX-Rll"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DZO-87-O4H">
+                                <rect key="frame" x="18" y="139" width="378" height="617"/>
+                                <color key="backgroundColor" red="0.38723441959999999" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.38823529410000002" green="0.47058823529999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nV1-Be-eNL">
+                                    <size key="itemSize" width="380" height="617"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="I30-10-tgw" customClass="CollectionViewCell" customModule="SuicideDetection">
+                                        <rect key="frame" x="0.0" y="0.0" width="380" height="617"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="paw-NT-siG">
+                                            <rect key="frame" x="0.0" y="0.0" width="380" height="617"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="C7R-8Y-eyN">
+                                                    <rect key="frame" x="20" y="82" width="340" height="162"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppU-XI-HhG">
+                                                    <rect key="frame" x="105.5" y="20" width="169" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="55" id="7v9-mk-xOl"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Upload Screenshot">
+                                                        <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="18"/>
+                                                        <color key="baseForegroundColor" red="0.38723441959999999" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="baseBackgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="uploadScreenshot:" destination="I30-10-tgw" eventType="touchUpInside" id="30K-lV-Acf"/>
+                                                    </connections>
+                                                </button>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DhO-Hn-yW4">
+                                                    <rect key="frame" x="20" y="369" width="352" height="132"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJs-Ue-gKJ">
+                                                    <rect key="frame" x="113.5" y="297" width="153" height="55"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="55" id="99N-h8-ihR"/>
+                                                        <constraint firstAttribute="width" constant="153" id="hFc-y3-K9W"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Convert to Text">
+                                                        <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="18"/>
+                                                        <color key="baseForegroundColor" red="0.38723441959999999" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="convertingButtonClicked:" destination="I30-10-tgw" eventType="touchUpInside" id="Dgj-YW-jwm"/>
+                                                    </connections>
+                                                </button>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="UmZ-VE-7cI">
+                                                    <rect key="frame" x="146.5" y="401" width="87" height="79"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="87" id="Evl-R6-2sU"/>
+                                                        <constraint firstAttribute="height" constant="79" id="qv4-dS-qo4"/>
+                                                    </constraints>
+                                                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </activityIndicatorView>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thU-6L-Irq">
+                                                    <rect key="frame" x="58" y="543" width="277" height="56"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Find Out If They Are Okay">
+                                                        <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="18"/>
+                                                        <color key="baseForegroundColor" red="0.38723441959999999" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="finalButtonClicked:" destination="I30-10-tgw" eventType="touchUpInside" id="zXt-e7-aJY"/>
+                                                    </connections>
+                                                </button>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type here...." id="7cb-S9-aiv">
+                                                    <rect key="frame" x="0.0" y="8" width="380" height="501"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="tintColor" red="0.38723441959999999" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.38723441959999999" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.38723441959999999" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="thU-6L-Irq" secondAttribute="bottom" constant="18" id="1QQ-5L-RIi"/>
+                                                <constraint firstItem="JJs-Ue-gKJ" firstAttribute="top" secondItem="C7R-8Y-eyN" secondAttribute="bottom" constant="53" id="2dg-Ww-9tf"/>
+                                                <constraint firstItem="JJs-Ue-gKJ" firstAttribute="centerX" secondItem="UmZ-VE-7cI" secondAttribute="centerX" id="5FC-q3-6Ww"/>
+                                                <constraint firstItem="ppU-XI-HhG" firstAttribute="centerX" secondItem="7cb-S9-aiv" secondAttribute="centerX" id="6hi-33-5CZ"/>
+                                                <constraint firstItem="thU-6L-Irq" firstAttribute="top" secondItem="DhO-Hn-yW4" secondAttribute="bottom" constant="42" id="7zH-kH-Uz4"/>
+                                                <constraint firstItem="C7R-8Y-eyN" firstAttribute="top" secondItem="ppU-XI-HhG" secondAttribute="bottom" constant="8" id="HWH-BG-qed"/>
+                                                <constraint firstItem="thU-6L-Irq" firstAttribute="leading" secondItem="paw-NT-siG" secondAttribute="leading" constant="58" id="N74-Lo-oco"/>
+                                                <constraint firstItem="thU-6L-Irq" firstAttribute="top" secondItem="7cb-S9-aiv" secondAttribute="bottom" constant="34" id="PE9-PG-Ibm"/>
+                                                <constraint firstItem="C7R-8Y-eyN" firstAttribute="centerX" secondItem="JJs-Ue-gKJ" secondAttribute="centerX" id="QfJ-f1-8hE"/>
+                                                <constraint firstItem="ppU-XI-HhG" firstAttribute="top" secondItem="paw-NT-siG" secondAttribute="top" constant="20" id="SgL-5D-POO"/>
+                                                <constraint firstItem="DhO-Hn-yW4" firstAttribute="top" secondItem="JJs-Ue-gKJ" secondAttribute="bottom" constant="17" id="WPs-ne-KQl"/>
+                                                <constraint firstItem="C7R-8Y-eyN" firstAttribute="leading" secondItem="DhO-Hn-yW4" secondAttribute="leading" id="Zy3-yD-7e7"/>
+                                                <constraint firstItem="UmZ-VE-7cI" firstAttribute="top" secondItem="JJs-Ue-gKJ" secondAttribute="bottom" constant="49" id="kl7-zf-KYz"/>
+                                                <constraint firstItem="DhO-Hn-yW4" firstAttribute="centerX" secondItem="thU-6L-Irq" secondAttribute="centerX" id="lT6-oe-w24"/>
+                                                <constraint firstItem="C7R-8Y-eyN" firstAttribute="leading" secondItem="paw-NT-siG" secondAttribute="leading" constant="20" id="mIR-5p-uXw"/>
+                                                <constraint firstItem="DhO-Hn-yW4" firstAttribute="trailing" secondItem="paw-NT-siG" secondAttribute="trailingMargin" id="oqO-MU-DDn"/>
+                                                <constraint firstItem="thU-6L-Irq" firstAttribute="top" secondItem="UmZ-VE-7cI" secondAttribute="bottom" constant="63" id="vTT-mw-AKp"/>
+                                                <constraint firstItem="ppU-XI-HhG" firstAttribute="centerX" secondItem="C7R-8Y-eyN" secondAttribute="centerX" id="wij-ST-Elh"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.38723441959999999" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="customSize" width="380" height="617"/>
+                                        <connections>
+                                            <outlet property="convertButton" destination="JJs-Ue-gKJ" id="o7s-KC-CAS"/>
+                                            <outlet property="imageInput" destination="C7R-8Y-eyN" id="K9n-cV-s1k"/>
+                                            <outlet property="mainButton" destination="thU-6L-Irq" id="9aq-6V-udO"/>
+                                            <outlet property="recognizedTextView" destination="DhO-Hn-yW4" id="LZi-5D-2Cv"/>
+                                            <outlet property="spinner" destination="UmZ-VE-7cI" id="Ee0-qD-MzR"/>
+                                            <outlet property="textBox" destination="7cb-S9-aiv" id="qwD-Eo-9k8"/>
+                                            <outlet property="uploadButton" destination="ppU-XI-HhG" id="Bs3-1h-hnl"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Y50-33-Kig"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="15t-39-YeL"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="g15-Ud-gDA">
+                                <rect key="frame" x="116" y="764" width="182" height="26"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.38823529411764707" green="0.47058823529411764" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g15-Ud-gDA" secondAttribute="bottom" constant="72" id="1ev-wK-klj"/>
+                            <constraint firstItem="DZO-87-O4H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JEx-Zn-ZT7"/>
+                            <constraint firstItem="DZO-87-O4H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="Jc3-Cd-uDA"/>
+                            <constraint firstItem="DZO-87-O4H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PpY-q4-4JD"/>
+                            <constraint firstItem="g15-Ud-gDA" firstAttribute="top" secondItem="DZO-87-O4H" secondAttribute="bottom" constant="8" id="Wd9-rH-0m4"/>
+                            <constraint firstItem="jEm-v7-PDQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-2" id="dRn-hW-Gts"/>
+                            <constraint firstItem="DZO-87-O4H" firstAttribute="top" secondItem="jEm-v7-PDQ" secondAttribute="bottom" constant="8" id="eqC-nR-vPV"/>
+                            <constraint firstItem="g15-Ud-gDA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="oUH-Oh-6Su"/>
+                            <constraint firstItem="jEm-v7-PDQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="vvc-FB-ae9"/>
+                            <constraint firstItem="jEm-v7-PDQ" firstAttribute="trailing" secondItem="DZO-87-O4H" secondAttribute="trailing" id="xPQ-2T-A3P"/>
+                            <constraint firstItem="DZO-87-O4H" firstAttribute="centerX" secondItem="g15-Ud-gDA" secondAttribute="centerX" id="xlv-Vu-HGq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="F1x-0V-kcV"/>
+                    <connections>
+                        <outlet property="collectionView" destination="DZO-87-O4H" id="PUp-VA-h3z"/>
+                        <outlet property="mainLabel" destination="jEm-v7-PDQ" id="Nwa-hc-SDT"/>
+                        <outlet property="pageControl" destination="g15-Ud-gDA" id="aVc-zW-cy9"/>
+                        <segue destination="csZ-qF-Cqc" kind="show" identifier="segueToMLScreen" id="2Fa-qE-SV8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="157.97101449275362" y="9.375"/>
+        </scene>
+        <!--Output-->
+        <scene sceneID="r6l-Bb-pWL">
+            <objects>
+                <viewController id="csZ-qF-Cqc" customClass="MLOutput" customModule="SuicideDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EC2-wF-RLv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check in, Take Action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtR-1d-P18">
+                                <rect key="frame" x="26" y="128" width="368" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Predicted level of risk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bz4-l2-d9o">
+                                <rect key="frame" x="56" y="315" width="303" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It is likely that this person is (not) talking about suicide," textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeI-0X-TIy">
+                                <rect key="frame" x="53" y="206" width="309" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Want to confirm the detected information? Please fill out the following form." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVK-M6-f5F">
+                                <rect key="frame" x="56" y="566" width="308" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="plo-r6-Cy8">
+                                <rect key="frame" x="53" y="452" width="308" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="More Info and Next Steps">
+                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="24"/>
+                                    <color key="baseForegroundColor" red="0.38723441959999999" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="moreInfoButtonClicked:" destination="csZ-qF-Cqc" eventType="touchUpInside" id="Efa-jf-hdc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aad-67-Zj5">
+                                <rect key="frame" x="106" y="667" width="202" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Confirming Form">
+                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.38723441959999999" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="confirmingButtonClicked:" destination="csZ-qF-Cqc" eventType="touchUpInside" id="1pd-qq-Dyc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Level of risk" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="080-tM-IXW">
+                                <rect key="frame" x="58" y="346" width="303" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2zb-45-3PW"/>
+                        <color key="backgroundColor" red="0.38723441959999999" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.38823529410000002" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e3q-2k-3qB"/>
+                    <connections>
+                        <outlet property="announcingLabel" destination="bz4-l2-d9o" id="fYJ-gk-vtN"/>
+                        <outlet property="confirmationButton" destination="Aad-67-Zj5" id="Uzt-lg-D7f"/>
+                        <outlet property="confirmationLabel" destination="cVK-M6-f5F" id="gh4-fu-jHH"/>
+                        <outlet property="detectionLabel" destination="WeI-0X-TIy" id="pxG-Sk-Txv"/>
+                        <outlet property="levelOfRiskLabel" destination="080-tM-IXW" id="7dO-97-Id5"/>
+                        <outlet property="mainLabel" destination="JtR-1d-P18" id="ybF-kx-bRJ"/>
+                        <outlet property="moreInfoButton" destination="plo-r6-Cy8" id="fRb-hd-zsL"/>
+                        <segue destination="caR-dO-9zr" kind="presentation" identifier="segueToFormScreen" id="Gs5-Df-n82"/>
+                        <segue destination="XgW-YG-E1Y" kind="show" identifier="toDetailView" id="HnI-oi-Hvs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7C-cw-TQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900.00000000000011" y="0.6696428571428571"/>
+        </scene>
+        <!--Form View-->
+        <scene sceneID="Vhu-YU-Gka">
+            <objects>
+                <viewController id="caR-dO-9zr" customClass="FormView" customModule="SuicideDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ijR-by-qhg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KE1-b5-uuz">
+                                <rect key="frame" x="20" y="12" width="374" height="362"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.38823529410000002" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fpr-pO-Bgp">
+                                    <size key="itemSize" width="358" height="354"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell2" id="YAP-mr-WFH" customClass="CollectionViewCell2" customModule="SuicideDetection">
+                                        <rect key="frame" x="0.0" y="4" width="358" height="354"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Y4a-Wb-doe">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="354"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Has this individual thought about suicide before?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1P-Wy-WnO">
+                                                    <rect key="frame" x="8" y="44" width="342" height="95"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="25"/>
+                                                    <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="297" translatesAutoresizingMaskIntoConstraints="NO" id="uNc-Hf-2sU">
+                                                    <rect key="frame" x="16" y="89" width="342" height="236"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">"Suicidal thoughts" refers to thoughts of suicide including preoccupations with risk factors such as loss of job, loss of strong relationship, chronic disease, mental illness, or substance abuse.</string>
+                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.38823529410000002" green="0.47058823529999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.38823529410000002" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.38823529410000002" green="0.47058823529999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="customSize" width="358" height="354"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="uNc-Hf-2sU" id="rlP-6U-ezG"/>
+                                            <outlet property="questionLabel" destination="Z1P-Wy-WnO" id="e49-q4-jK6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="caR-dO-9zr" id="ghz-Zl-3d0"/>
+                                    <outlet property="delegate" destination="caR-dO-9zr" id="c8g-wu-C7M"/>
+                                </connections>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="TSx-HX-A0h">
+                                <rect key="frame" x="149" y="474" width="116" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNw-8g-Tf5">
+                                <rect key="frame" x="239" y="367" width="111" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="No">
+                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.38823529410000002" green="0.47058823529999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="noClicked:" destination="caR-dO-9zr" eventType="touchUpInside" id="c8G-eP-iKi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P85-WX-Vaf">
+                                <rect key="frame" x="48" y="367" width="116" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Yes">
+                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.38823529410000002" green="0.47058823529999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="yesClicked:" destination="caR-dO-9zr" eventType="touchUpInside" id="MfD-ZO-BB1"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="suicide-prevention-responding-to-red-flags" translatesAutoresizingMaskIntoConstraints="NO" id="8sT-CI-0pR">
+                                <rect key="frame" x="48" y="532" width="318" height="186"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ftN-m6-rCN"/>
+                        <color key="backgroundColor" red="0.38823529410000002" green="0.47183936830000001" blue="0.42386937139999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="KE1-b5-uuz" id="akc-VT-bEG"/>
+                        <outlet property="image" destination="8sT-CI-0pR" id="5ut-Sx-ewl"/>
+                        <outlet property="noButton" destination="UNw-8g-Tf5" id="BMa-rX-hbF"/>
+                        <outlet property="pageControl" destination="TSx-HX-A0h" id="Yiu-mc-YpN"/>
+                        <outlet property="yesButton" destination="P85-WX-Vaf" id="p9e-PQ-KYe"/>
+                        <segue destination="gkK-xl-yIO" kind="unwind" identifier="unWindToMLOutput" unwindAction="unwindToMLOutput:" id="Hsb-KL-2HX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdH-ja-19j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="gkK-xl-yIO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1711.5942028985507" y="0.6696428571428571"/>
+        </scene>
+        <!--Detail View-->
+        <scene sceneID="IAZ-Fa-oi5">
+            <objects>
+                <viewController id="XgW-YG-E1Y" customClass="DetailView" customModule="SuicideDetection" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cpN-sc-4uc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check in, Take Action" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zp2-CR-raj">
+                                <rect key="frame" x="23" y="119" width="368" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Suicidal ideation - low risk" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fY-ey-TzY">
+                                <rect key="frame" x="39" y="198" width="335" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What does this mean?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVe-Hh-U3W">
+                                <rect key="frame" x="91" y="280" width="250" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How Can I help?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKk-AR-vd1">
+                                <rect key="frame" x="82" y="498" width="250" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="25"/>
+                                <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Provide support as a suicidal caregiver. Reach out to a crisis line if extra support is needed." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAw-0W-brJ">
+                                <rect key="frame" x="23" y="566" width="368" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="75g-MN-L8y">
+                                <rect key="frame" x="40" y="743" width="330" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="How to Act as a Suicidal Caregiver">
+                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.38823529410000002" green="0.47058823529999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="caregiverClicked:" destination="XgW-YG-E1Y" eventType="touchUpInside" id="LCx-fy-E45"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af2-lY-SnI">
+                                <rect key="frame" x="80" y="673" width="248" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Call Suicidal Hotline">
+                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.38823529410000002" green="0.47058823529999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="hotlineClicked:" destination="XgW-YG-E1Y" eventType="touchUpInside" id="4Li-pm-R4F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jm-gL-6Xl">
+                                <rect key="frame" x="81" y="673" width="248" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Call 911">
+                                    <fontDescription key="titleFontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="18"/>
+                                    <color key="baseForegroundColor" red="0.38823529410000002" green="0.47058823529999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="Call911Clicked:" destination="XgW-YG-E1Y" eventType="touchUpInside" id="kov-3z-Q1I"/>
+                                    <action selector="hotlineClicked:" destination="XgW-YG-E1Y" eventType="touchUpInside" id="fak-22-yzu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wow-2f-cjq">
+                                <rect key="frame" x="31" y="330" width="371" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">"Suicidal ideation" refers to thoughts of suicide including preoccupations with risk factors such as loss of job, loss of strong relationship, chronic disease, mental illness, or substance abuse.</string>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                <color key="textColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vdd-jg-sYP"/>
+                        <color key="backgroundColor" red="0.38823529410000002" green="0.47058823529999999" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oZP-EY-lUR"/>
+                    <connections>
+                        <outlet property="Call911Button" destination="9jm-gL-6Xl" id="40p-6f-4Mv"/>
+                        <outlet property="definitionDescription" destination="wow-2f-cjq" id="rDn-HW-zw7"/>
+                        <outlet property="definitionLabel" destination="wow-2f-cjq" id="hYI-7W-R9A"/>
+                        <outlet property="helpLabel" destination="RAw-0W-brJ" id="iJg-7J-xAL"/>
+                        <outlet property="howCanIHelp" destination="uKk-AR-vd1" id="4DH-55-C8p"/>
+                        <outlet property="levelOfRiskLabel" destination="3fY-ey-TzY" id="hFm-ZA-lDB"/>
+                        <outlet property="suicidalCaregiverButton" destination="75g-MN-L8y" id="v4I-ut-abw"/>
+                        <outlet property="suicidalHotlineButton" destination="af2-lY-SnI" id="WEC-Fr-cjN"/>
+                        <outlet property="titeleLabel" destination="Zp2-CR-raj" id="ljh-e9-tmb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qnx-zf-mwz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508.6956521739135" y="0.6696428571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VJm-aR-a2j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ywQ-O7-TP6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3cL-oz-b4u">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Et1-M6-mCo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8Z-bP-yeb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-752.17391304347836" y="9.375"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="suicide-prevention-responding-to-red-flags" width="300" height="300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
